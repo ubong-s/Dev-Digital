@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeroContainer } from './HeroElements';
+import heroImg from '../../images/hero.svg';
 
 const Hero = () => {
   return (
@@ -12,6 +13,7 @@ const Hero = () => {
           voluptatem. Nihil dolorem, eum quos nesciunt tempore, veritatis ex
           quia culpa tempora molestias commodi, explicabo optio.
         </p>
+        <img src={heroImg} alt='' />
       </div>
     </HeroContainer>
   );

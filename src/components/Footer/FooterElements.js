@@ -4,8 +4,13 @@ export const FooterContainer = styled.footer`
   background-color: #00217a;
   color: #fff;
   padding: 4rem 0;
+  /* margin: 0; */
 
   .logo {
+    color: #fff;
+  }
+
+  h3 {
     color: #fff;
   }
 
@@ -74,6 +79,37 @@ export const FooterContainer = styled.footer`
         font-size: 0.75rem;
         margin-right: 0.5rem;
       }
+    }
+  }
+`;
+
+export const WebsiteCopyright = styled.div`
+  background-color: #00217a;
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-top: solid rgba(255, 255, 255, 0.1) 1px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    color: #fe6247;
+
+    &:hover {
+      opacity: 0.7;
+      transition: 0.3s all ease-in-out;
     }
   }
 `;

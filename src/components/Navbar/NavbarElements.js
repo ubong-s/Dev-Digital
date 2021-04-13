@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.header`
   position: sticky;
   top: 0;
-
   padding: 1rem;
   z-index: 2;
 
   @media screen and (min-width: 1024px) {
     margin: 1rem 0;
+    top: 1rem;
   }
 
   nav {
@@ -18,6 +18,8 @@ export const NavbarContainer = styled.header`
     justify-content: space-between;
     background: #fff;
     padding: 1rem;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 6%);
+    transition: 0.3s all ease-in-out;
 
     .hamburger {
       cursor: pointer;
@@ -96,6 +98,7 @@ export const NavbarContainer = styled.header`
           background-color: #fff;
           transition: 0.3s all ease-in-out;
           opacity: 0;
+          transform: scale(0);
 
           li {
             margin-right: 2rem;
@@ -114,6 +117,7 @@ export const NavbarContainer = styled.header`
 
           &.active {
             opacity: 1;
+            transform: scale(1);
           }
         }
       }
@@ -142,10 +146,6 @@ export const NavbarContainer = styled.header`
             transition: 0.3s all ease-in-out;
           }
         }
-      }
-
-      &.active {
-        box-shadow: 0 6px 16px rgb(0 0 0 / 6%);
       }
     }
   }
@@ -188,7 +188,7 @@ export const NavbarContainer = styled.header`
       transform: translateX(0);
       transition: 0.3s all ease-in-out;
       border-top: solid 3px #fe6247;
-      /* height: auto; */
+      box-shadow: 0 6px 16px rgb(0 0 0 / 6%);
     }
 
     .mobile-social {
