@@ -4,7 +4,7 @@ import heroImg from '../../images/hero.svg';
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id='hero'>
       <div className='container'>
         <h1>Creative plan for your business</h1>
         <p>

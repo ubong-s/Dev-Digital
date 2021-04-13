@@ -7,7 +7,7 @@ import market from '../../images/market.svg';
 
 const Services = () => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id='services'>
       <div className='container'>
         <div className='services-top'>
           <h2>We Provide Awesome Services</h2>

@@ -8,6 +8,7 @@ export const FooterContainer = styled.footer`
 
   .logo {
     color: #fff;
+    cursor: pointer;
   }
 
   h3 {
@@ -68,6 +69,7 @@ export const FooterContainer = styled.footer`
 
       a {
         color: #fff;
+        cursor: pointer;
 
         &:hover {
           color: #fe6247;

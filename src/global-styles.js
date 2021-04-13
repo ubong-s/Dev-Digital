@@ -2,12 +2,15 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 html, body {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
    position:relative;
    font-family: 'Source Sans Pro', sans-serif;
    line-height: 1.75;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,6 +19,12 @@ h1, h2, h3, h4, h5, h6 {
    letter-spacing: 1px;
    color: #00217a;
    line-height: 1.3;
+   margin-bottom: 1.25rem;
+}
+
+p {
+
+   margin-bottom:1rem;
 }
 
 h1 {
@@ -57,7 +66,7 @@ a {
 }
 
 .container {
-   width: 95%;
+   width: 92.5%;
    margin: auto;
 
    @media screen and (min-width: 768px) {
@@ -77,12 +86,13 @@ a {
 
    span {
       color: #fe6247;
+      font-family: 'Lora', serif;
    }
 }
 
 .btn {
    cursor: pointer;
-   padding:0.95rem 1.25rem;
+   padding: 0.75rem 1.25rem;
    font-size: 1.15rem;
    letter-spacing: 0.5px;
    outline:none;

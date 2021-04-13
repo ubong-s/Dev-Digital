@@ -1,6 +1,5 @@
 import React from 'react';
 import { FooterContainer, WebsiteCopyright } from './FooterElements';
-import { Link } from 'react-router-dom';
 import {
   FaEnvelope,
   FaFacebook,
@@ -11,15 +10,20 @@ import {
   FaPhone,
   FaTwitter,
 } from 'react-icons/fa';
+import { animateScroll as scroll, Link } from 'react-scroll';
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <FooterContainer>
         <div className='container'>
           <div className='footer-grid'>
             <div className>
-              <Link to='/' className='logo'>
+              <Link to='/' className='logo' onClick={toggleHome}>
                 Dev<span>Digital</span>
               </Link>
               <p className='footer-about'>
@@ -56,16 +60,49 @@ const Footer = () => {
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                 </li>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link
+                    to='hero'
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={500}
+                  >
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to='services'
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={500}
+                  >
+                    Services
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/about'>About</Link>
+                  <Link
+                    to='mission'
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={500}
+                  >
+                    Mission
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/services'>Services</Link>
-                </li>
-                <li>
-                  <Link to='/contact'>Contact</Link>
+                  <Link
+                    to='contact'
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={500}
+                  >
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

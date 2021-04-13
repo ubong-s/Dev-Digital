@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.section`
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
-  /* background-color: #fffcf6; */
 
   @media screen and (min-width: 1024px) {
-    padding: 6rem 0 8rem;
+    padding: 4rem 0 4rem;
   }
 
   .services-top {

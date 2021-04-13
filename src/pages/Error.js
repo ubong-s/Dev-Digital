@@ -8,7 +8,7 @@ const Error = () => {
     <ErrorContainer>
       <div className='container '>
         <img src={lost} alt='lost' />
-        <h1>Oops, Someone's Lost</h1>
+        <h1>Ouch, Page doesn't exist</h1>
         <Link to='/'>
           <button className='btn'>Back to Home</button>
         </Link>
@@ -24,11 +24,12 @@ const ErrorContainer = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 85vh;
+  height: 100vh;
   line-height: 1;
 
   img {
     max-width: 375px;
+    margin-bottom: 2rem;
 
     @media screen and (min-width: 1024px) {
       max-width: 400px;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.header`
   position: sticky;
   top: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   z-index: 2;
 
   @media screen and (min-width: 1024px) {
@@ -18,8 +18,11 @@ export const NavbarContainer = styled.header`
     justify-content: space-between;
     background: #fff;
     padding: 1rem;
-    box-shadow: 0 6px 16px rgb(0 0 0 / 6%);
     transition: 0.3s all ease-in-out;
+
+    &.active {
+      box-shadow: 0 6px 16px rgb(0 0 0 / 6%);
+    }
 
     .hamburger {
       cursor: pointer;
@@ -79,6 +82,20 @@ export const NavbarContainer = styled.header`
 
       .logo {
         color: #00217a;
+        font-size: 2rem;
+
+        @media screen and (min-width: 1024px) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-20%, -50%);
+          transition: 0.3s all ease-in-out;
+
+          &.active {
+            opacity: 0;
+            transition: 0.3s all ease-in-out;
+          }
+        }
       }
 
       .nav-links {
@@ -107,10 +124,15 @@ export const NavbarContainer = styled.header`
             a {
               color: #00217a;
               transition: 0.3s all ease-in-out;
+              cursor: pointer;
 
               &:hover {
                 color: #fe6247;
                 transition: 0.3s all ease-in-out;
+              }
+
+              &.active {
+                color: #fe6247;
               }
             }
           }
@@ -130,16 +152,17 @@ export const NavbarContainer = styled.header`
     @media screen and (min-width: 1024px) {
       display: grid;
       grid-template-columns: auto 1fr auto;
-      gap: 3rem;
+      gap: 2.5rem;
       padding: 1.5rem 2rem;
 
       .nav-social {
         display: flex;
         font-size: 1.5rem;
+        justify-self: end;
 
         a {
           color: #00217a;
-          margin-left: 0.75rem;
+          margin-left: 1rem;
 
           &:hover {
             color: #fe6247;
@@ -174,6 +197,7 @@ export const NavbarContainer = styled.header`
 
       a {
         color: #00217a;
+        cursor: pointer;
 
         &:hover {
           color: #fe6247;
@@ -199,6 +223,28 @@ export const NavbarContainer = styled.header`
         font-size: 1.5rem;
         margin: 0 1rem;
       }
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .mobile-nav-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
     }
 
     @media screen and (min-width: 1024px) {
