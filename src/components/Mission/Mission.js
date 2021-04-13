@@ -22,7 +22,7 @@ const Mission = () => {
             itaque totam eos quidem minus distinctio corrupti deserunt
             reprehenderit, porro maiores dolorem facilis.
           </p>
-          <Link>
+          <Link to='contact'>
             <button className='btn'>Get Started</button>
           </Link>
         </div>

@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import ToTop from './components/ToTop';
 
 import Error from './pages/Error';
 import Home from './pages/index';
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='*' exact component={Error} />
-        </Switch>
-      </Router>
+      <Switch location={location} key={location.key}>
+        <Route path='/' exact component={Home} />
+        <Route path='*' exact component={Error} />
+      </Switch>
+      <ToTop />
+      <ScrollToTop />
     </>
   );
 }
