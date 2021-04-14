@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import nulla from '../../images/nulla.svg';
 
@@ -22,7 +22,13 @@ const Mission = () => {
             itaque totam eos quidem minus distinctio corrupti deserunt
             reprehenderit, porro maiores dolorem facilis.
           </p>
-          <Link to='contact'>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-125}
+            duration={500}
+          >
             <button className='btn'>Get Started</button>
           </Link>
         </div>

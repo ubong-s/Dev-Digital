@@ -79,8 +79,10 @@ const ContactConatiner = styled.section`
       padding: 0.5rem 0.75rem;
       margin: 0.5rem 0;
       border: 1px solid #e7e7e7;
+      border-radius: 0;
       background-color: #fff;
       font-family: 'Source Sans Pro', sans-serif;
+      outline: none;
     }
 
     textarea {
@@ -88,8 +90,10 @@ const ContactConatiner = styled.section`
       padding: 0.5rem 0.75rem;
       margin: 0.5rem 0 0;
       border: 1px solid #e7e7e7;
+      border-radius: 0;
       background-color: #fff;
       font-family: 'Source Sans Pro', sans-serif;
+      outline: none;
     }
 
     input:focus,

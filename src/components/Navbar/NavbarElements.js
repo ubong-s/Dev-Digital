@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.header`
   position: sticky;
   top: 0;
-  padding: 1rem 0;
+
   z-index: 2;
 
   @media screen and (min-width: 1024px) {
+    padding: 1rem 0;
     margin: 1rem 0;
     top: 1rem;
   }
@@ -202,6 +203,10 @@ export const NavbarContainer = styled.header`
         &:hover {
           color: #fe6247;
           transition: 0.3s all ease-in-out;
+        }
+
+        &.active {
+          color: #fe6247;
         }
       }
     }
